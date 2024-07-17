@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Upload</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="watermark-container">
+      <div class="watermark">PhotoByteConverter</div>
+    </div>
+    <div class="container">
+      <h1>Upload a Photo</h1>
+      <form
+        id="uploadForm"
+        enctype="multipart/form-data"
+        method="post"
+        action="http://localhost:8080/api/photo"
+      >
+        <input type="file" name="file" accept="image/*" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <h2>Response:</h2>
+      <pre id="response"></pre>
+      <img id="uploadedImage" alt="Uploaded Image" style="display: none" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
